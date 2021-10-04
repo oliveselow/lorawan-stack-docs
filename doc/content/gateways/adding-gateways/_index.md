@@ -35,9 +35,11 @@ You can now connect your gateway to {{% tts %}}.
 
 ### Create Gateway API Key
 
-Some gateways require an API Key with Link Gateway Rights to be able to connect to {{% tts %}}. 
+Gateways that use secure protocols such as [{{% lbs %}}]({{< relref "lora-basics-station" >}}) require an API Key to be able to connect to {{% tts %}}. See the [{{% lbs %}}]({{< relref "lora-basics-station" >}}) documentation for additional instructions to connect these gateways.
 
-In order to do this, navigate to the **API Keys** menu of your gateway and select **Add API Key**. 
+{{< note >}}[UDP gateways]({{< ref "gateways/udp" >}}) do not require an API key as they implement no authentication. This step can be skipped for gateways using UDP.{{</ note >}}
+
+To create an API key, navigate to the **API Keys** menu of your gateway and select **Add API Key**. 
 
 Enter a name for your key, select the **Link as Gateway to a Gateway Server for traffic exchange, i.e. write uplink and read downlink** right and then press **Create API Key**.
 
@@ -91,15 +93,18 @@ This creates a gateway `gtw1` with user `admin` as collaborator, frequency plan 
 
 ### Create Gateway API Key
 
-Some gateways require an API Key with Link Gateway Rights to be able to connect to {{% tts %}}.
+Gateways that use secure protocols such as [{{% lbs %}}]({{< relref "lora-basics-station" >}}) require an API Key to be able to connect to {{% tts %}}. See the [{{% lbs %}}]({{< relref "lora-basics-station" >}}) documentation for additional instructions to connect these gateways.
 
-Create an API key for the gateway:
+{{< note >}}[UDP gateways]({{< ref "gateways/udp" >}}) do not require an API key as they implement no authentication. This step can be skipped for gateways using UDP.{{</ note >}}
+
+To create an API key for the gateway:
 
 ```bash
 $ ttn-lw-cli gateways api-keys create \
   --name link \
   --gateway-id gtw1 \
   --right-gateway-link
+## --additional-rights
 ```
 
 The CLI will return an API key such as `NNSXS.VEEBURF3KR77ZR...`. This API key has only link rights and can therefore only be used for linking this gateway. Make sure to copy the key and save it in a safe place. You will not be able to see this key again in the future, and if you lose it, you can create a new one to replace it in the gateway configuration.
