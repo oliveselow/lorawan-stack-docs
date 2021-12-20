@@ -17,7 +17,7 @@ Devices are managed under applications. An application can contain an unlimited 
 
 ## Adding Devices using the Console
 
-To create a device, first open the application you wish to add the device in. Go to **End devices** in the left menu and click on **+ Add end device** to reach the end device registration page.
+To add a device, first open the application you wish to add the device in. Go to **End devices** in the left menu and click on **+ Add end device** to reach the end device registration page.
 
 {{< figure src="application-overview.png" alt="Application overview" >}}
 
@@ -33,7 +33,7 @@ In addition to the written instructions below, a video with instructions for add
 
 To use the device repository, make sure the **From the LoRaWAN Device Repository** tab is selected. Then, select the **Brand**, **Model**, **Hardware Version**, **Software Version**, and **Region** for your device.
 
-If your device is not in the device repository, see [Manually Create End Device](#manually-create-end-device) below.
+If your device is not in the device repository, see [Manually Registering an End Device](#manually-registering-an-end-device) below.
 
 {{< figure src="device-repo.png" alt="Creating a new device with the Device Repository" >}}
 
@@ -53,7 +53,7 @@ For LoRaWAN version 1.1.x devices, you will also see a **NwkKey** field. If it i
 
 {{< figure src="device-repo-settings.png" alt="Device information" >}}
 
-Finally, give your device a unique **End device ID**, and click the **Register end device** button to create the end device. See [ID and EUI constraints]({{< ref "reference/id-eui-constraints" >}}) for guidelines about choosing a unique ID.
+Finally, give your device a unique **End device ID**, and click the **Register end device** button to add the end device. See [ID and EUI constraints]({{< ref "reference/id-eui-constraints" >}}) for guidelines about choosing a unique ID.
 
 {{< figure src="device-repo-settings.png" alt="Device information" >}}
 
@@ -77,7 +77,7 @@ Choose a **Frequency plan** appropriate for your region. Your device and gateway
 
 Choose the **Regional Parameters version** provided by the manufacturer of your device. This should be specified in the data sheet as Regional Parameters or PHY version.
 
-{{< figure src="manual.png" alt="Manually create end device" >}}
+{{< figure src="manual.png" alt="Manually register end device" >}}
 
 If you need to use a method of activation other than OTAA, create a multicast group, specify a Class B or Class C device, or change Rx Delay and Frequency plan settings, see the [Advanced settings](#advanced-settings) section below. Otherwise, proceed to [OTAA devices](#otaa-devices).
 
@@ -119,9 +119,9 @@ If your manufacturer provides an **AppKey**, enter it. Otherwise, use the **Gene
 
 Give your device a unique **End device ID**. See [ID and EUI constraints]({{< ref "reference/id-eui-constraints" >}}) for guidelines about choosing a unique ID.
 
-{{< figure src="manual-network-settings-otaa.png" alt="Manually create OTAA end device" >}}
+{{< figure src="manual-network-settings-otaa.png" alt="Manually add OTAA end device" >}}
 
-Click **Register end device** to create the end device.
+Click **Register end device** to add the end device.
 
 ### ABP Devices
 
@@ -145,9 +145,9 @@ For LoRaWAN versions 1.1.x, generate an **AppSKey**, **FNwkSIntKey**, **SNwkSInt
 
 Finally, give your device a unique **End device ID**. See [ID and EUI constraints]({{< ref "reference/id-eui-constraints" >}}) for guidelines about choosing a unique ID.
 
-{{< figure src="manual-network-settings-abp.png" alt="Manually create OTAA end device" >}}
+{{< figure src="manual-network-settings-abp.png" alt="Manually add OTAA end device" >}}
 
-Click **Register end device** to create the end device.
+Click **Register end device** to add the end device.
 
 ## Adding Devices in Bulk
 
